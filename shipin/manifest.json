@@ -1,0 +1,24 @@
+{
+   "background": {
+      "scripts": [ "htm5.cn.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "hegu.ico",
+         "38": "hegu.ico"
+      },
+      "default_popup": "htm5.cn.html",
+      "default_title": "By:何故"
+   },
+   "description": "插件方便解析电影电视剧播放和下载--只作交流学习之用，请在下载后24小时内删除，出自何故博客 http://www.htm5.cn",
+   "icons": {
+      "128": "hegu.ico",
+      "16": "hegu.ico",
+      "48": "hegu.ico"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzQ8FhU8a9h/Iaf9aSm5KKnB/LBO2oCckRQzudb2thPl9xAlZqj5AamLM78DiPBcOuAr8yetcyX1oL1Bgtyy6fjHE5NRnf2FuSpu0JHSJsVrM2+33ZT/gthKyqpKH25mjxtmSmeHMq9x869BZ2CGFuiNRYZf0Xk3/YWd1pGQJ7qPUMI0Go85GMLm70xYbJAPQQyiXWl5NLDporA3XNxbRIQXpRlUtB/XcuvDW1PwROJdV8SBWzDDsD8+5FooLVoxNpL3izcpbfcrZv9xAhY1SGw6tBCJx4LHjbgQ5kZMp6q9TJIUA0O9D6gF1eG/vp3Yt2F9cZiGysefXjczP0cBNqwIDAQAB",
+   "manifest_version": 3,
+   "name": "和他们看",
+   "permissions": [ "contextMenus" ],
+   "version": "6.6.6.8"
+}

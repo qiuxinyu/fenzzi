@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/instyle.css" type="text/css" rel="stylesheet">
+<LINK href="css/mobanwang.css" type="text/css" rel="stylesheet"> <!--焦点图-->
+<SCRIPT src="js/jquery-1.4.2.min.js" type=text/javascript></SCRIPT> <!--焦点图-->
+<SCRIPT src="js/mobanwang.js" type=text/javascript></SCRIPT> <!--焦点图-->
+<script type="text/javascript" src="js/jquery.js"></script>
+<!--搜索获得和失去焦点-->
+ <script type="text/javascript">
+    					$(function(){
+						$(":input").focus(function(){
+			  				if($(this).val() ==this.defaultValue){  
+                  			$(this).val("");           
+			  					} 
+						}).blur(function(){
+			 			if ($(this).val() == '') {
+               		 	$(this).val(this.defaultValue);
+            					 }
+						});
+    									})
+    				</script>
+<!--导航-->
+<script type="text/javascript">
+function menuFix() {
+ var sfEls = document.getElementById("nav").getElementsByTagName("li");
+ for (var i=0; i<sfEls.length; i++) {
+  sfEls[i].onmouseover=function() {
+  this.className+=(this.className.length>0? " ": "") + "sfhover";
+  }
+  sfEls[i].onMouseDown=function() {
+  this.className+=(this.className.length>0? " ": "") + "sfhover";
+  }
+  sfEls[i].onMouseUp=function() {
+  this.className+=(this.className.length>0? " ": "") + "sfhover";
+  }
+  sfEls[i].onmouseout=function() {
+  this.className=this.className.replace(new RegExp("( ?|^)sfhover\\b"), 
+"");
+  }
+ }
+}
+window.onload=menuFix;
+</script>
+<!--下拉框-->
+<script language="javascript">
+$(function(){
+	$("#l1").silder();		   
+	$("#l2").silder();
+	$("#l3").silder();		   
+});
+;(function($) {
+	$.fn.silder = function(){
+		var $this=this,
+			span=$this.find("span"),
+			dl=$this.find("dl");
+			a=dl.find("a");
+			span.click(function(){
+				dl.stop(true,true).slideDown();								  
+			});
+			a.click(function(){
+				span.text(this.innerHTML);
+				dl.stop(true,true).slideUp();
+			})
+			$("body,html").click(function(){
+				if(this!==window.event.srcElement)
+				return;
+				dl.stop(true,true).slideUp();
+			});
+	};
+})(jQuery); 
+</script>
+</head>
+
+<body>
+ <div class="container">
+ <!--top-->
+ <div class="top">
+  <ul>
+   <li><a href="">中文</a></li>
+   <li><a href="">English</a></li>
+   <li><a href="">App</a></li>
+   <li>
+   <form>
+   <table cellpadding="0" cellspacing="0">
+    <tr>
+     <td><input type="text" value="Search" class="te1"></td>
+     <td><a href=""><img src="images/4.jpg" class="but1"></a></td>
+    </tr>
+   </table>
+   </form>
+   </li>
+  </ul>
+ </div>
+ <!--焦点图-->
+ <div class="jiao">
+ <DIV id=imgPlay>
+<UL class=imgs id=actor>
+  <LI><A href="http://www.mobanwang.com/" target=_blank><IMG  src="images/01.jpg" width="1024" height="350"></A></LI>
+  <LI><A href="http://www.mobanwang.com/" target=_blank><IMG src="images/02.jpg" width="1024" height="350"></A></LI>
+  <LI><A href="http://www.mobanwang.com/" target=_blank><IMG  src="images/03.jpg" width="1024" height="350"></A></LI>
+  <LI><A href="http://www.mobanwang.com/" target=_blank><IMG   src="images/04.jpg" width="1024" height="350"></A></LI>
+</UL>
+<DIV class=num id=numInner></DIV>
+<DIV class=prev>上一张</DIV>
+<DIV class=next>下一张</DIV></DIV>
+ </div>
+ <!--导航-->
+ <div class="linkbg">
+  <ul id="nav">
+<li class="spic_home"><a href="/">Home</a>
+ 
+</li>
+
+<li><a href="">Study in Shanghai</a>
+ <ul>
+     <li><a href="">China</a></li>
+     <li><a href="">World</a></li>
+ </ul>
+</li>
+
+<li><a href="">Application Guide</a>
+ <ul>
+     <li><a href="">Festival Calendar</a></li>
+     <li><a href="">Festival in Comics</a></li>
+     <li><a href="">Celebrations</a></li>
+ </ul>
+</li>
+
+<li><a href="">Discover Shanghai</a>
+ <ul>
+     <li><a href="">Stories</a></li>
+     <li><a href="">Horse in Art</a></li>
+     <li><a href="">Souvenirs</a></li>
+     <li><a href="">Ma Shang Style</a></li>
+ </ul>
+</li>
+
+<li><a href="">News Center</a>
+</li>
+
+<li><a href="">Learn Chinese</a>
+ 
+</li>
+
+</ul>
+ </div>
+ <!--下全-->
+ <div class="bottom_all">
+  <!--下左-->
+  <div class="bottom_left">
+   <!--Newstitle-->
+   <div class="Newstitle">
+   <p>
+   <img src="images/8.jpg">
+   <span class="spic1"><a href="">News</a></span>
+   </p>
+   
+   </div>
+   <!--Newsleft-->
+   <div class="Newsleft">
+   <a href=""><img src="images/12.jpg"></a>
+   </div>
+   <!--Newsright-->
+   <div class="Newsright">
+    <h1><a href="">New restaurant flexes its Mex muscle</a></h1>
+    <h2>2013-12-21 </h2>
+    <p>Locke praises probable successorUpdated: 2013-12-20 17:02 By Zhao Yinan ( chinadaily.com.cn) Comments  Print  Mail  Large Medium  SmallOutgoing US Ambassador Gary Locke expressed his .</p>
+    <ul>
+     <li><a href="">Locke praises probable successorUpdated: </a></li>
+     <li><a href="">Cai Chunfeng, 42, committed the crime of intentional homicidmembHefei Intermediate </a></li>
+    </ul>
+    <h3><a href="">Read More</a></h3>
+   </div>
+   <!--Universities-->
+   <div class="Universities">
+   <p>
+   <img src="images/9.jpg">
+   <span class="spic1"><a href="">Universities</a></span>
+   </p>
+   <h1>The China Securities Regulatory Commission will revamp the rules of the National Equities Exchange and Quotations board at the end of this year.  the rules of the National Equities Exchange </h1>
+   <h3><a href="">Read More</a></h3>
+
+   </div>
+   <!--Services-->
+   <div class="Services">
+      <p>
+   <img src="images/11.jpg">
+   <span class="spic1"><a href="">Services</a></span>
+   </p>
+   <h1>The China the rules of the National Equities Exchange and Quotations board at the end of this year.  the rules of the National Equities Exchange </h1>
+   <h3><a href="">Read More</a></h3>
+
+   </div>
+   <!--Explore Shanghai-->
+   <div class="Explore">
+   <!--Exploretitle-->
+   <div class="Exploretitle">
+   <p>
+   <img src="images/10.jpg">
+   <span class="spic1"><a href="">Explore Shanghai</a></span>
+   </p>
+   
+   </div>
+   <!--图片-->
+   <div class="shanghai">
+   <span><a href=""><img src="images/20.jpg"></a></span>
+   <span><a href=""><img src="images/21.jpg"></a></span>
+   <span><a href=""><img src="images/22.jpg"></a></span>
+   <span><a href=""><img src="images/23.jpg"></a></span>
+   </div>
+   </div>
+  
+  
+  
+  </div>
+  <!--下右-->
+  <div class="bottom_right">
+  <!--下拉框-->
+  <div class="box">
+  	<div id="l1" class="lable1">
+    	<span>Levels</span>
+        <dl>
+        	<dd><a href="javascript:void(0)">下拉菜单一</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单二</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单三</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单四</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单五</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单六</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单七</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单八</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单九</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单十</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单十一</a></dd>
+        </dl>
+    </div><br /><br /><br /><br />
+    <div id="l2" class="lable1">
+    	<span>Subjects</span>
+        <dl>
+        	<dd><a href="javascript:void(0)">下拉菜单一</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单二</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单三</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单四</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单五</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单六</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单七</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单八</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单九</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单十</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单十一</a></dd>
+        </dl>
+    </div><br /><br /><br /><br />
+    <div id="l3" class="lable1">
+    	<span>Universities</span>
+        <dl>
+        	<dd><a href="javascript:void(0)">下拉菜单一</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单二</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单三</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单四</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单五</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单六</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单七</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单八</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单九</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单十</a></dd>
+        	<dd><a href="javascript:void(0)">下拉菜单十一</a></dd>
+        </dl>
+    </div>  
+  </div>
+  <!--搜索框-->
+  <div class="search">
+   <table cellpadding="0" cellspacing="0">
+   <tr>
+   <td><input type="text" value="keywords" class="te2"></td>
+   <td>
+    <a href=""><img src="images/24.jpg" class="but1"></a>
+   </td>
+   </tr>
+   </table>
+  </div>
+  <!--广告-->
+  <div class="ad">
+   <p><a href=""><img src="images/25.jpg"></a></p>
+   <p><a href=""><img src="images/26.jpg"></a></p>
+  </div>
+  
+  </div>
+ 
+ </div>
+ <div style="clear:both">&nbsp;</div>
+ <!--底部-->
+ <div class="foot">
+  <ul>
+   <li><a href="">Sitemap</a></li>
+   <li><a href=""> Privacy Statement</a></li>
+   <li><a href="">Terms of Use</a></li>
+   <li><a href="">Copyright</a></li>
+  </ul>
+  <p>Copyright @ 2013 Shanghai Municipal Education Commission. All rights reserved.</p>
+ </div>
+ 
+ 
+ </div>
+</body>
+</html>
